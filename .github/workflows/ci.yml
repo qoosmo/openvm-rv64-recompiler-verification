@@ -20,6 +20,7 @@ jobs:
           test: false
           lint: false
           leanchecker: true
+          leanchecker-args: OpenVMRVR
           axiom-audit: true
           axiom-audit-root: OpenVMRVR
 
