@@ -1,0 +1,18 @@
+[package]
+name = "openvm-rv64-w-harness"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+
+[lib]
+name = "rv64w"
+path = "src/lib.rs"
+
+[[bin]]
+name = "code001"
+path = "src/main.rs"

@@ -1,0 +1,13 @@
+run_id = "FORMAL-001-20260919-permission-blocked"
+result_class = "INCONCLUSIVE_RESOURCE"
+backend = "Lean 4 kernel via Lake (not executed)"
+timeout_seconds = 120
+input_width_bits = 64
+variants = 0
+interventions = 0
+lemmas = 9
+counterexample_found = false
+wall_clock_seconds = 0
+command = "lake build; ./scripts/verify.sh"
+outcome = "Both commands were denied by the execution permission boundary before process launch."
+proof_artifact = "OpenVMRVR/Semantics.lean (unverified candidate)"

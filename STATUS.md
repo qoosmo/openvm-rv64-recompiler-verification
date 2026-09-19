@@ -5,9 +5,9 @@
 - [x] Pin upstream OpenVM revision.
 - [x] Define narrow semantic-preservation target.
 - [x] Split coding and formal-verification work into isolated agent worktrees.
-- [ ] CODE-001: executable differential semantics harness.
-- [ ] FORMAL-001: Lean model + checked theorems for `ADDW/SUBW/SLLW/SRLW/SRAW`.
-- [ ] REVIEW-001: cross-review assumptions between code and proofs.
+- [x] CODE-001: executable differential semantics harness.
+- [x] FORMAL-001: Lean model + checked theorems for `ADDW/SUBW/SLLW/SRLW/SRAW`.
+- [x] REVIEW-001: cross-review assumptions between code and proofs.
 - [ ] CI green on a clean checkout.
 - [ ] Preprint claims frozen from verified artifacts only.
 

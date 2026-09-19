@@ -1,0 +1,34 @@
+[experiment]
+id = "FORMAL-001"
+question = "Under explicit two's-complement uint32_t-to-int32_t conversion and arithmetic negative-int32_t right-shift choices, do the five pinned structural OpenVM C-expression models equal independent RV64 W semantics for every pair of 64-bit operands?"
+hypothesis = "Under the two explicit implementation-defined C11 choices, all five modeled expressions are combinationally functionally equivalent to the corresponding architectural definitions."
+primary_metric = "all five universal Lean theorems accepted by the Lean kernel"
+secondary_metrics = ["lake build result", "scripts/verify.sh result", "wall-clock runtime"]
+timeout_seconds = 120
+maximum_interventions = 1
+acceptable_evidence_class = "PROVED_FORMAL"
+stopping_condition = "Stop after deterministic verification passes, or after one bounded proof-structure intervention or a tool/resource failure."
+
+[contract]
+input_width_bits = 64
+output_width_bits = 64
+word_width_bits = 32
+shift_width_bits = 5
+latency = 0
+state = "none; pure combinational functions"
+legal_inputs = "all pairs of 64-bit words"
+overflow = "well-defined unsigned fixed-width arithmetic; final sign interpretation is conditional on the explicit uint32_t-to-int32_t implementation choice"
+
+[provenance]
+upstream_repository = "https://github.com/openvm-org/openvm.git"
+upstream_commit = "594b044e705891bcc2abd01578410da7dfcd1efe"
+upstream_file = "extensions/riscv/rvr/src/i/instruction.rs"
+lean_toolchain = "leanprover/lean4:v4.33.1"
+baseline_project_sha256 = "c9f7fc2ff7d0e60c71a64fe6f0ed46b3b1b01ecb3e4817c7c708cca2b81eec65"
+baseline_root_sha256 = "17ec94a84382b6dc5f21d323ab1551eaaede560725af20e7bb5e17e67d2cd2ae"
+baseline_lakefile_sha256 = "0153e0ae9d5516554d55d9c917f19c3b8f25c4009d510cb721c02ae5aed93e90"
+
+[baseline]
+description = "Clean scaffold with only projectVersion; captured before Lean semantics were added."
+git_status = "clean"
+verification = "not run: execution policy denied lake and scripts/verify.sh during preflight"

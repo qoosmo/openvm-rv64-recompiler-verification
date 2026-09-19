@@ -1,4 +1,5 @@
 import OpenVMRVR.Project
+import OpenVMRVR.Semantics
 
 namespace OpenVMRVR
 
