@@ -1,0 +1,6 @@
+name = "openvm-rv64-recompiler-verification"
+version = "0.1.0"
+defaultTargets = ["OpenVMRVR"]
+
+[[lean_lib]]
+name = "OpenVMRVR"

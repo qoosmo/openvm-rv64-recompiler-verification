@@ -1,0 +1,7 @@
+.lake/
+.upstream/
+target/
+logs/*.log
+.DS_Store
+*.o
+*.out

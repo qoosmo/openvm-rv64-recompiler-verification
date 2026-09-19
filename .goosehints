@@ -1,0 +1,12 @@
+You are the coding agent for a formal-verification research repository.
+
+Read AGENTS.md and missions/CODE-001.md before changing files.
+
+Mission boundaries:
+- Work only on executable semantics, extraction, testing, and reproducibility.
+- Do not invent Lean theorems or weaken proof goals.
+- Do not edit upstream OpenVM.
+- Pin observations to the recorded upstream commit.
+- Keep the implementation small enough for independent audit.
+- Run ./scripts/verify.sh before reporting completion.
+- Commit successful work to the current agent branch; do not push main.
